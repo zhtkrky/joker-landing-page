@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='style.css'>
+    <title>JOKER</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="./assets/logo.png"></a>
+        <div class='toggle'><img src="./assets/toggle.png"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Put on a <span>Happy</span> face</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto libero eos enim qui assumenda
+                repellat pariatur voluptatibus harum, blanditiis alias ratione nisi quidem unde earum est vero similique
+                nam nesciunt.
+            </p>
+            <a href="#" class="play" onclick="toggle();"><img src="./assets/play.png" alt="">Watch Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="https://www.facebook.com/zhtkrky/" target="blank"><img src="./assets/facebook.png"></a>
+                </li>
+                <li><a href="https://www.twitter.com/zhtkrky/" target="blank"><img src="./assets/twitter.png"></a></li>
+                <li><a href="https://www.instagram.com/zhtkrky/" target="blank"><img src="./assets/instagram.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="trailer">
+        <iframe src="https://www.youtube.com/embed/zAGVQLHvwOY" width="560" height="315" controls='true'
+            frameborder="0"></iframe>
+        <img src="./assets/close.png" class="close" onclick="toggle();" alt="">
+    </div>
+    <script>
+        function toggle() {
+            let trailer = document.querySelector('.trailer');
+            let video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+
+</html>
